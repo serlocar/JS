@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 80%;
+    margin: 1em auto;
+    background-color: goldenrod;
+}
+#nombre{
+    border: 2px solid black;
+    padding: 5px;
+    margin-bottom: 50px;
+}
+#btn1{
+    color: white;
+    background-color: black;
+}
+#respuesta{
+    margin-top: 50px;
+}
