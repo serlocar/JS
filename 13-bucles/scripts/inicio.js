@@ -9,12 +9,28 @@ let sammple = () => {
 }
 
 let factorial = (pNumber) => {
-    let nResult = 1
-	for (let i = pNumber; i > 1; i--) {
-		nResult *= i;
-	}
-    return nResult;
-}
 
-let nNumber = prompt("Dime un numero menor que 170");
+	aMensajes = [
+		"No existe el factorial de 0",
+		"SÃ³lo existen factoriales de los nÃºmeros",
+		"No puedes usar nÃºmeros tan grandes"
+	]
+
+	try {
+		if (pNumber == 0) { throw 0;}
+		if (isNaN(Number(pNumber))) {throw 1}
+		if (pNumber > 170) {throw 2}
+
+		let nResult = 1
+		for (let i = pNumber; i > 1; i--) {
+			nResult *= i;
+		}
+		return nResult;
+
+	} catch (error) {
+		return aMensajes [error]
+	}
+} // Fin de la funciÃ³n factorial
+
+let nNumber = prompt("Dime un nÃºmero menor que 170");
 console.log(factorial(nNumber))
